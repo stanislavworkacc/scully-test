@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/static"
+  command = "ng build && npm run scully"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
