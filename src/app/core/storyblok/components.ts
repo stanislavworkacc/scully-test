@@ -12,7 +12,7 @@ const Components: any = {
   'intro': IntroComponent,
   'benefits': BenefitsComponent,
   'price': PriceComponent,
-  'maps': MapsComponent,
+  // 'maps': MapsComponent,
   'faq': FaqComponent
 };
 
