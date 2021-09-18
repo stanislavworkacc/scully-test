@@ -27,7 +27,19 @@
     "@scullyio/scully": "^1.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@agm/core": "^1.1.0",
+    "@apollo/client": "^3.4.10",
+    "@types/google-maps": "^3.2.3",
+    "@types/googlemaps": "3.39.12",
+    "apollo-angular": "^2.6.0",
+    "apollo-angular-link-http": "^1.11.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "graphql": "^15.5.2",
+    "graphql-request": "^3.5.0",
+    "graphql-tag": "^2.12.5",
+    "ng-dynamic-component": "^5.0.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.3",

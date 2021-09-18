@@ -1,0 +1,17 @@
+<div [appStoryblok]="_editable" class="benefits">
+  <div class="benefits__wrapper">
+    <div
+      *ngFor="let item of content; index as idx"
+      class="benefits__card"
+      [appStoryblok]="item._editable"
+    >
+      <div
+        *ngIf="this.item.icon.filename"
+        [class]="getAdditionalClass(idx + 1, 'img')"
+        [ngStyle]="{ 'mask-image': 'url(' + getCurrentSvg(idx) + ')' }"
+      ></div>
+      <h1 [class]="getAdditionalClass(idx + 1, 'title')">{{ item.title }}</h1>
+      <p class="benefits__content">{{ item.text }}</p>
+    </div>
+  </div>
+</div>

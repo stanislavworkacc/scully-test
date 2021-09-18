@@ -1,0 +1,36 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/fonts';
+
+.mobile {
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list {
+    display: none;
+
+    @include laptop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+  }
+
+  &__item {
+    line-height: 25px;
+    color: #000359;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 600;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}

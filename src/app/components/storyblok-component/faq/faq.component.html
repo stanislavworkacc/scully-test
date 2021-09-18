@@ -1,0 +1,12 @@
+<div class="faq-accordion">
+  <h1 class="faq-accordion__title">FAQ</h1>
+  <accordion [collapsing]="collapsing">
+    <accordion-item *ngFor="let accItem of faq" [title]="accItem.title">
+      <ng-template accordionContent>
+        <div>
+          {{ accItem.description }}
+        </div>
+      </ng-template>
+    </accordion-item>
+  </accordion>
+</div>

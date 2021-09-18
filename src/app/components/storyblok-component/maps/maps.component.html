@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="current-city">
+    <div class="current-city__tab" *ngFor="let item of maps; let i = index" [ngClass]="{active: currentSlide === i}" (click)="currentCity(item.city)">{{item.city}}</div>
+  </div>
+  <div class="carousel">
+    <ng-container *ngFor="let slide of maps; let i = index">
+      <agm-map class="slide"
+               *ngIf="i === currentSlide"
+               [zoom]="zoom"
+               [@slideAnimation]="animationType"
+               [longitude]="convertToNumber(slide.city_points[0].lng)"
+               [latitude]="convertToNumber(slide.city_points[0].lat)"
+      >
+        <agm-marker *ngFor="let item of slide.city_points"
+                    [label]="'M'"  [openInfoWindow]="true" [latitude]="convertToNumber(item.lat)" [longitude]="convertToNumber(item.lng)">
+          <agm-info-window [disableAutoPan]="true" [isOpen]="false">
+            <div>{{item.address}}</div>
+            <div>{{item.tel}}</div>
+            <div>{{item.work_time}}</div>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </ng-container>
+    <button class="control prev" (click)="onPreviousClick()">
+      <span class="arrow left"></span>
+    </button>
+    <button class="control next" (click)="onNextClick()">
+      <span class="arrow right"></span>
+    </button>
+  </div>
+</div>

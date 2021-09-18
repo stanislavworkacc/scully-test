@@ -1,0 +1,11 @@
+//@import 'src/assets/scss/variables';
+//@import 'src/assets/scss/fonts';
+.faq-accordion {
+  margin-top: 100px;
+  padding: 0 88px 0;
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

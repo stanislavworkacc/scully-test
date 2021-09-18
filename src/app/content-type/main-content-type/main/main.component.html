@@ -1,0 +1,8 @@
+<div class="root">
+  <div *ngIf="story.content">
+    <ndc-dynamic [ndcDynamicComponent]="components[storyComponent]"
+                 [ndcDynamicInputs]="story.content"
+    >
+    </ndc-dynamic>
+  </div>
+</div>

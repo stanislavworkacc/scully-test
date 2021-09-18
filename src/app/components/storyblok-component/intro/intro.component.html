@@ -1,0 +1,8 @@
+<div [appStoryblok]="_editable" class="intro">
+  <div class="intro__content">
+    <h1 [appStoryblok]="titleGetter._editable" class="intro__title">{{titleGetter.title}}</h1>
+    <p [appStoryblok]="textGetter._editable" class="intro__info">{{textGetter.text}}</p>
+    <button [appStoryblok]="buttonGetter._editable" class="intro__button">{{buttonGetter.button}}</button>
+  </div>
+  <img class="intro__image" src="assets/banner.svg" alt="intro-image">
+</div>

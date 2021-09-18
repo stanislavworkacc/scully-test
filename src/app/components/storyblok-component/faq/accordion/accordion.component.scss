@@ -1,0 +1,73 @@
+:host {
+  --accordion-header-height: 50px;
+  --accordion-header-bg: hsl(0, 0%, 95%);
+  --accordion-disabled: hsl(0, 0%, 60%);
+  --accordion-border-radius: 8px;
+  width: 100%;
+}
+.accordion {
+  border-radius: var(--accordion-border-radius);
+}
+.accordion__item.accordion__header {
+  border-radius: var(--accordion-border-radius) var(--accordion-border-radius);
+}
+
+.accordion__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.accordion__header {
+  display: flex;
+  padding: 28px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px 5px 0px 0px;
+  height: var(--accordion-header-height);
+  cursor: pointer;
+  background: var(--accordion-header-bg);
+}
+
+.accordion__content {
+  padding: 0 2rem;
+}
+
+.accordion__toggle-btn {
+  border: none;
+  transition: transform 0.4s ease-in-out;
+  background: none;
+}
+
+.accordion__item.disabled .accordion__header {
+  color: var(--accordion-disabled);
+  cursor: not-allowed;
+}
+.accordion__toggle-btn:disabled {
+  cursor: not-allowed;
+}
+.accordion__toggle-btn:disabled svg path:nth-child(2) {
+  fill: var(--accordion-disabled);
+}
+.accordion__item.active .accordion__toggle-btn {
+  transform: rotate(180deg);
+}
+
+.accordion__item .accordion__header:focus-within {
+  border-color: var(--primary);
+  border-radius: var(--accordion-border-radius);
+}
+.accordion__toggle-btn:focus {
+  outline: none;
+}
+
+.expanded {
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0px 0px 5px 5px;
+  border-top: none;
+}
+
+.accordion__title {
+  font-weight: 600;
+}

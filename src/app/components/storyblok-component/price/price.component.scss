@@ -1,0 +1,56 @@
+.pricing {
+  margin-top: 100px;
+  padding: 0 88px 0;
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #122f56;
+    letter-spacing: 0.5px;
+  }
+  th {
+    background-color: #bad0f6;
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  th,
+  td {
+    text-align: center;
+    padding: 25px;
+  }
+
+  tr {
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+
+    &:nth-child(odd) {
+      background-color: #bad0f6;
+    }
+
+    &:not(:first-child) {
+      &:hover,
+      &:focus {
+        background-color: #122f56;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__table {
+    border-radius: 20px !important;
+  }
+
+  &__table-cell_left {
+    text-align: left !important;
+    font-weight: 500;
+  }
+
+  &__table-cell_footer {
+    padding: 0px;
+  }
+}

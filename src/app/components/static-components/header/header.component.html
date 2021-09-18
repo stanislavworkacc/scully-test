@@ -1,0 +1,24 @@
+<div *ngIf="!detectDeviceService.sideBarRules(width, isCurrentDeviceMobile) else mobile " [appStoryblok]="_editable" class="header">
+  <a class="header__logo" [routerLink]="['/']"></a>
+  <nav class="header__wrapper">
+      <app-side-nav-content [isMobile]="!detectDeviceService.sideBarRules(width, isCurrentDeviceMobile)"></app-side-nav-content>
+  </nav>
+</div>
+
+<ng-template #mobile>
+  <header>
+    <div class="header-menu">
+      <span (click)="toggleSideNav()" class="menu-icon material-icons">menu</span>
+    </div>
+  </header>
+  <app-side-nav
+    [sidenavTemplateRef]="navContent"
+    [direction]="'left'"
+    [navWidth]="280"
+    [duration]="0.5">
+  </app-side-nav>
+</ng-template>
+
+<ng-template #navContent>
+  <app-side-nav-content [isMobile]="!detectDeviceService.sideBarRules(width, isCurrentDeviceMobile)"></app-side-nav-content>
+</ng-template>

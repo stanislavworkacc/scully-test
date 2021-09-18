@@ -1,0 +1,33 @@
+<div [appStoryblok]="_editable" class="pricing">
+  <h1 class="pricing__title">Прайс-лист</h1>
+  <table class="pricing__table">
+    <tr class="pricing__table-row">
+      <th></th>
+      <th *ngFor="let item of services" [appStoryblok]="item._editable">
+        {{ item.name }}
+      </th>
+    </tr>
+    <tr
+      *ngFor="let item of clothes"
+      class="pricing__table-row"
+      [appStoryblok]="item._editable"
+    >
+      <td class="pricing__table-cell_left">{{ item.name }}</td>
+      <td
+        *ngFor="let clothes of item.content"
+        class="pricing__table-cell"
+        [appStoryblok]="clothes._editable"
+      >
+        {{ clothes.price[0].price }}
+      </td>
+    </tr>
+    <tfoot>
+      <tr class="pricing__table-row_footer">
+        <td class="pricing__table-cell_footer"></td>
+        <td class="pricing__table-cell_footer"></td>
+        <td class="pricing__table-cell_footer"></td>
+        <td class="pricing__table-cell_footer"></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
