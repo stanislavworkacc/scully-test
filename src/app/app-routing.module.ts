@@ -7,11 +7,6 @@ import {BlogComponent} from "./blog/blog.component";
 const routes: Routes = [
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)},
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
-  },
-  {
     path: 'home',
     component: MainComponent
   },
@@ -19,14 +14,14 @@ const routes: Routes = [
     path: 'faq',
     component: MainComponent
   },
-  {
-    path: '**',
-    component: BlogComponent,
-  }
   // {
   //   path: '**',
-  //   component: NotFoundComponent
+  //   component: BlogComponent,
   // }
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({
