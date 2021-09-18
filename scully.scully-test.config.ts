@@ -10,8 +10,5 @@ export const config: ScullyConfig = {
         folder: "./blog"
       }
     },
-    '/home': {
-      type: 'contentFolder',
-    }
   }
 };
